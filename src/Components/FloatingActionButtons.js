@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
     padding: 0,
     margin: theme.spacing(2),
-    width: "50px",
-    height: "50px",
+    width: theme.spacing(3),
+    height: theme.spacing(3),
   }
 }));
 
@@ -39,16 +39,16 @@ export default function FloatingActionButtons() {
     <div className={classes.root}>
       <div className={classes.vertical}>
         <IconButton color="primary" aria-label="add" className={classes.button}>
-          <GitHubIcon  fontSize="large"/>
+          <GitHubIcon  fontSize="medium"/>
         </IconButton>
         <IconButton color="primary" aria-label="add" className={classes.button}>
-          <LinkedinIcon  fontSize="large"/>
+          <LinkedinIcon  fontSize="medium"/>
         </IconButton>
         <IconButton color="primary" aria-label="add" className={classes.button}>
-          <InstagramIcon  fontSize="large"/>
+          <InstagramIcon  fontSize="medium"/>
         </IconButton>
         <IconButton color="primary" aria-label="add" className={classes.button}>
-          <TwitterIcon  fontSize="large"/>
+          <TwitterIcon  fontSize="medium"/>
         </IconButton>
       </div>
     </div>

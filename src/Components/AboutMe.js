@@ -8,6 +8,10 @@ import CodeIcon from '@material-ui/icons/Code';
 const useStyles = theme => ({
     root: {
         margin: 0,
+        [theme.breakpoints.down('md')]: {
+            paddingTop: theme.spacing(5),
+            paddingBottom: theme.spacing(5)
+        },
         padding: "150px 0px",
         width: "100%",
     },
@@ -23,12 +27,38 @@ const useStyles = theme => ({
     card: {
         backgroundColor: theme.palette.background.default,
     },
+    description: {
+        order: 0,
+        [theme.breakpoints.down('md')]: {
+          order: 1,
+        },
+    },
     avatarContainer: {
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        order: 1,
+        [theme.breakpoints.down('md')]: {
+            order: 0,
+          },
+    },
+    skills1: {
+        order: 2,
+        [theme.breakpoints.down('md')]: {
+            order: 2,
+          },
+    },
+    skills2: {
+        order: 3,
+        [theme.breakpoints.down('md')]: {
+            order: 3,
+          },
     },
     large: {
+        [theme.breakpoints.down('md')]: {
+            margin: theme.spacing(2),
+            width: "60%"
+        },
         width: "100%",
         height: "auto",
       },
@@ -46,12 +76,15 @@ class AboutMe extends Component {
                 <Container maxWidth="lg" className={classes.container}>
                     <Card className={classes.card} raised>
                         <CardContent style={{padding: 50}}>
-                            <Grid container justify="flex-start" spacing={6} >
+                            <Grid container justify="flex-start" spacing={2} >
 
-                                <Grid item xs={8} key="about_me"> 
+                                <Grid item xs={12} md={8} className={classes.title} key="title">
                                     <Typography variant="h5" color="primary" noWrap display="inline" style={{letterSpacing: 4}}>{(index.toString(2).length === 1 ? '00' + index.toString(2) : '0' + index.toString(2)) + '.'}</Typography>
-                                        <Typography variant="h4" color="textPrimary" noWrap display="inline" style={{marginLeft: 20, letterSpacing: 4}}><b>About Me</b></Typography>
-                                        <Typography variant="body1" color="textPrimary" style={{letterSpacing: 2, margin: "40px 0px"}}>Hi! I'm a Software Engineer based in Seattle (WA) who likes to build applications for any kind of environment. I produce exceptional high code using the most sophisticated design patterns, in order to make my applications fast, efficient and easily scalable.
+                                    <Typography variant="h4" color="textPrimary" noWrap display="inline" style={{marginLeft: 20, letterSpacing: 4}}><b>About Me</b></Typography>
+                                </Grid>
+
+                                <Grid item xs={12} md={8} className={classes.description} key="about_me"> 
+                                    <Typography variant="body1" color="textPrimary" style={{letterSpacing: 2}}>Hi! I'm a Software Engineer based in Seattle (WA) who likes to build applications for any kind of environment. I produce exceptional high code using the most sophisticated design patterns, in order to make my applications fast, efficient and easily scalable.
                                         <br />
                                         <br />
                                         I graduated in Italy at the Università degli Studi di Pisa where I got a Software Engineering degree and an Automation Engineering Master's degree.
@@ -61,11 +94,11 @@ class AboutMe extends Component {
                                     </Typography>
                                 </Grid>
 
-                                <Grid item xs={4} className={classes.avatarContainer} key="avatar">
+                                <Grid item xs={12} md={4} className={classes.avatarContainer} key="avatar">
                                     <Avatar alt="Lorenzo Decaria" src="/img/lorenzo.jpg" className={classes.large} />
                                 </Grid>
 
-                                <Grid item key="skills1">
+                                <Grid item className={classes.skills1} key="skills1">
                                     <List>
                                         {["C / C++", "Objective", "JavaScript", "HTML / CSS"].map( (item, index) => {
                                             return (
@@ -79,7 +112,7 @@ class AboutMe extends Component {
                                     </List> 
                                 </Grid>
 
-                                <Grid item key="skills2">
+                                <Grid item className={classes.skills2} key="skills2">
                                     <List>
                                         {["iOS / tvOS", "NodeJS / React", "Express", "MongoDB / Mongoose"].map( (item, index) => {
                                             return (

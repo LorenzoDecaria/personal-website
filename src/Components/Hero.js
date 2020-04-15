@@ -10,7 +10,7 @@ import AnimatableText from './AnimatableText'
 const useStyles = theme => ({
     mainContainer: {
         minHeight: '100vh',
-        backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('../img/desk.jpeg')",
+        backgroundImage: "linear-gradient(to bottom, rgba(34, 38, 41, 0.9), rgba(34, 38, 41, 0.8)), url('../img/desk.jpeg')",
         backgroundRepeat:"no-repeat",
         backgroundSize: "cover",
 
