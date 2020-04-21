@@ -78,7 +78,7 @@ class AboutMe extends Component {
                         <CardContent style={{padding: 50}}>
                             <Grid container justify="flex-start" spacing={2} >
 
-                                <Grid item xs={12} md={8} className={classes.title} key="title">
+                                <Grid item xs={12} md={8} style={{paddingBottom: 40}} className={classes.title} key="title">
                                     <Typography variant="h5" color="primary" noWrap display="inline" style={{letterSpacing: 4}}>{(index.toString(2).length === 1 ? '00' + index.toString(2) : '0' + index.toString(2)) + '.'}</Typography>
                                     <Typography variant="h4" color="textPrimary" noWrap display="inline" style={{marginLeft: 20, letterSpacing: 4}}><b>About Me</b></Typography>
                                 </Grid>

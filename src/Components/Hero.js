@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Typography, Button, Box } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-// import Particles from 'react-particles-js';
-// import particle_config from './particle_config'
+import Particles from 'react-particles-js';
+import particle_config from './particle_config'
 import AnimatableText from './AnimatableText'
 
 
@@ -10,7 +10,8 @@ import AnimatableText from './AnimatableText'
 const useStyles = theme => ({
     mainContainer: {
         minHeight: '100vh',
-        backgroundImage: "linear-gradient(to bottom, rgba(34, 38, 41, 0.9), rgba(34, 38, 41, 0.8)), url('../img/desk.jpeg')",
+        background: "rgba(0, 0, 0, 0.4)",
+        // backgroundImage: "linear-gradient(to bottom, rgba(34, 38, 41, 0.9), rgba(34, 38, 41, 0.8)), url('../img/desk.jpeg')",
         backgroundRepeat:"no-repeat",
         backgroundSize: "cover",
 
@@ -74,16 +75,17 @@ class Hero extends React.Component {
         return (
             <Box boxShadow={10}>
                 <Container component="section" maxWidth="fixed" className={classes.mainContainer}>
-                {/* <Particles style={{
+                <Particles style={{
                     position: "absolute",
                     top: 0,
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    zIndex: -100
+                    zIndex: -100,
+                    backgroundColor: "rgb(29, 32, 34)"
                     }}
                     params={particle_config}>
-                </Particles> */}
+                </Particles>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant='h6'className={classes.greetings} color="primary">Hi, my name is</Typography>
                     <Typography variant='h1'className={classes.name} color="textPrimary"><b><AnimatableText text="Lorenzo Decaria"></AnimatableText></b></Typography>

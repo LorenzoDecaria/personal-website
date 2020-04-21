@@ -8,6 +8,8 @@ import Hero from './Components/Hero'
 import FloatingActionButtons from './Components/FloatingActionButtons'
 import AboutMe from './Components/AboutMe'
 import Experience from './Components/Experience'
+// import Education from './Components/Education'
+import GetInTouch from './Components/GetInTouch'
 
 
 export class App extends React.Component {
@@ -41,6 +43,8 @@ export class App extends React.Component {
         <Hero /> 
         <AboutMe />
         <Experience />
+        {/* <Education /> */}
+        <GetInTouch />
       </ThemeProvider>
     );
   }
